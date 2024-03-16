@@ -1,9 +1,9 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import { useEffect, useState } from 'react';
 import RecipeCard from '../recipe-card';
 
-const RecipeCards = () => {
+const RecipeCards = ({ wishlistHandler }) => {
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
     fetch('fakedata.json')
@@ -14,12 +14,14 @@ const RecipeCards = () => {
   return (
     <div className="w-3/5 grid grid-cols-2 gap-4">
       {recipes.map((recipe) => (
-        <RecipeCard key={recipe.recipe_id} recipe={recipe} />
+        <RecipeCard wishlistHandler={wishlistHandler} key={recipe.recipe_id} recipe={recipe} />
       ))}
     </div>
   );
 };
 
-RecipeCards.propTypes = {};
+RecipeCards.propTypes = {
+  wishlistHandler: PropTypes.func.isRequired,
+};
 
 export default RecipeCards;

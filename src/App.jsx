@@ -1,7 +1,15 @@
+import { useState } from 'react';
+import Cart from './components/cart';
 import Header from './components/header';
 import RecipeCards from './components/recipe-cards';
 
 function App() {
+  const [wishlist, setWishlist] = useState([]);
+
+  const wishlistHandler = (item) => {
+    setWishlist([...wishlist, item]);
+  };
+
   return (
     <>
       <Header />
@@ -29,14 +37,15 @@ function App() {
 
         {/* OUR RECIPES SECTION */}
         <section className="mb-24">
-          <header className="max-w-[823px] mx-auto space-y-5 text-center">
+          <header className="max-w-[823px] mx-auto space-y-5 text-center mb-11">
             <h2 className="text-slate-900 text-[40px] font-semibold">Our Recipes</h2>
             <p className="text-slate-900 text-opacity-60 text-base font-normal">
               Embark on a culinary adventure with us and discover the magic that happens when passion meets plate. Let's create unforgettable memories, one recipe at a time.
             </p>
           </header>
-          <main className="flex">
-            <RecipeCards />
+          <main className="flex gap-6">
+            <RecipeCards wishlistHandler={wishlistHandler} />
+            <Cart wishlist={wishlist} />
           </main>
         </section>
       </main>
