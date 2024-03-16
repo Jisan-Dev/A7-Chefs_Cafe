@@ -2,7 +2,7 @@ import { HiOutlineUserCircle } from 'react-icons/hi2';
 
 const Header = () => {
   return (
-    <header className="font-lexend container mx-auto">
+    <header className="font-lexend container mx-auto my-6">
       <div className="navbar bg-base-100">
         <div className="navbar-start max-sm:w-full">
           <div className="dropdown">
