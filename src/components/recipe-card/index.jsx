@@ -16,10 +16,10 @@ const RecipeCard = ({ recipe }) => {
         ))}
       </ul>
       <div className="mt-5 flex gap-5 mb-5 font-fira items-center">
-        <p className="flex items-center gap-2 text-zinc-800 text-opacity-80 text-base font-normal -ml-1">
+        <p className="flex items-center gap-2 text-zinc-800 text-opacity-80 text-base font-normal ">
           <CiClock2 className="w-6 h-6" /> {preparing_time} minutes
         </p>
-        <p className="flex items-center gap-2 text-zinc-800 text-opacity-80 text-base font-normal -ml-1">
+        <p className="flex items-center gap-2 text-zinc-800 text-opacity-80 text-base font-normal ">
           <AiOutlineFire className="w-6 h-6" /> {calories} calories
         </p>
       </div>
