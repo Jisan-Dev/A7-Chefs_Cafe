@@ -6,6 +6,7 @@ import RecipeCards from './components/recipe-cards';
 function App() {
   const [wishlist, setWishlist] = useState([]);
   const [displayToast, setDisplayToast] = useState(false);
+  // const [cooking, setCooking] = useState([]);
 
   const wishlistHandler = (item) => {
     const isExist = wishlist.some((wishedItem) => wishedItem.recipe_id === item.recipe_id);
@@ -15,6 +16,12 @@ function App() {
     } else {
       setDisplayToast(true);
     }
+  };
+
+  const cookingTableHandler = (item) => {
+    const newWishlist = wishlist.filter((wishedItem) => wishedItem.recipe_id !== item.recipe_id);
+
+    setWishlist(newWishlist);
   };
 
   useEffect(() => {
@@ -67,7 +74,7 @@ function App() {
           </header>
           <main className="flex gap-6">
             <RecipeCards wishlistHandler={wishlistHandler} />
-            <Cart wishlist={wishlist} />
+            <Cart wishlist={wishlist} cookingTableHandler={cookingTableHandler} />
           </main>
         </section>
       </main>

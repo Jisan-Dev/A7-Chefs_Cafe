@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Cart = ({ wishlist }) => {
+const Cart = ({ wishlist, cookingTableHandler }) => {
   return (
     <div className="w-[38%] border border-zinc-800 border-opacity-20 rounded-2xl">
       <div className="flex flex-col gap-4 items-center">
@@ -26,7 +26,9 @@ const Cart = ({ wishlist }) => {
                   <td className="p-2"> {item.preparing_time} minutes </td>
                   <td className="p-2"> {item.calories} calories </td>
                   <td className="p-2">
-                    <button className="px-4 py-2 bg-emerald-500 rounded-[50px] text-slate-900 text-base font-medium">Preparing</button>
+                    <button onClick={() => cookingTableHandler(item)} className="px-4 py-2 bg-emerald-500 rounded-[50px] text-slate-900 text-base font-medium">
+                      Preparing
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -40,6 +42,7 @@ const Cart = ({ wishlist }) => {
 
 Cart.propTypes = {
   wishlist: PropTypes.array.isRequired,
+  cookingTableHandler: PropTypes.func.isRequired,
 };
 
 export default Cart;
