@@ -1,4 +1,5 @@
 import Header from './components/header';
+import RecipeCards from './components/recipe-cards';
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
               Embark on a culinary adventure with us and discover the magic that happens when passion meets plate. Let's create unforgettable memories, one recipe at a time.
             </p>
           </header>
-          <main className="flex"></main>
+          <main className="flex">
+            <RecipeCards />
+          </main>
         </section>
       </main>
     </>
