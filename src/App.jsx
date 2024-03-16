@@ -1,18 +1,34 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cart from './components/cart';
 import Header from './components/header';
 import RecipeCards from './components/recipe-cards';
 
 function App() {
   const [wishlist, setWishlist] = useState([]);
+  const [displayToast, setDisplayToast] = useState(false);
 
   const wishlistHandler = (item) => {
-    setWishlist([...wishlist, item]);
+    const isExist = wishlist.some((wishedItem) => wishedItem.recipe_id === item.recipe_id);
+
+    if (!isExist) {
+      setWishlist([...wishlist, item]);
+    } else {
+      setDisplayToast(true);
+    }
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDisplayToast(false);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [displayToast]);
 
   return (
     <>
       <Header />
+
       <main className="font-lexend container mx-auto">
         {/* HERO SECTION */}
         <section className="mb-24">
@@ -34,6 +50,12 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* TOAST */}
+        <div
+          className={`alert ${displayToast ? 'opacity-100' : 'opacity-0 pointer-events-none'} bg-indigo-500 fixed top-0 right-10 z-20 w-96 text-white transition-all duration-300`}>
+          <p className="text-center">Recipe already added!</p>
+        </div>
 
         {/* OUR RECIPES SECTION */}
         <section className="mb-24">
