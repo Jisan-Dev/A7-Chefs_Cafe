@@ -12,7 +12,7 @@ const RecipeCards = ({ wishlistHandler }) => {
   }, []);
 
   return (
-    <div className="w-3/5 grid grid-cols-2 gap-4">
+    <div className="lg:w-3/5 grid grid-cols-1 lg:grid-cols-2 gap-4">
       {recipes.map((recipe) => (
         <RecipeCard wishlistHandler={wishlistHandler} key={recipe.recipe_id} recipe={recipe} />
       ))}

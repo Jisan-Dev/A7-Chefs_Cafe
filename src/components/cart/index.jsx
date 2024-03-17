@@ -27,7 +27,7 @@ const Cart = ({ wishlist, cookingTableHandler, cookingItems }) => {
   }, [cookingItems]);
 
   return (
-    <div className="w-[38%] border border-zinc-800 border-opacity-20 rounded-2xl">
+    <div className="lg:w-[38%] border border-zinc-800 border-opacity-20 rounded-2xl">
       <div className="flex flex-col gap-4 items-center">
         <h2 className="text-center text-zinc-800 text-2xl font-semibold mt-7">Want to cook: {wishlist.length} </h2>
         <hr className="w-2/3 border border-[#28282826]" />
