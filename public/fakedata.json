@@ -23,7 +23,7 @@
     "recipe_image": "https://i.ibb.co/XxjBQkt/recipe3.jpg",
     "short_description": "Healthy grilled salmon served with lemon and herbs",
     "ingredients": ["2 salmon fillets", "1 lemon", "2 tbsp olive oil"],
-    "preparing_time": "20 min",
+    "preparing_time": 20,
     "calories": 280
   },
   {
@@ -32,7 +32,7 @@
     "recipe_image": "https://i.ibb.co/pwPVfYj/recipe4.jpg",
     "short_description": "Nutritious and flavorful salad made with quinoa, vegetables, and vinaigrette dressing",
     "ingredients": ["1 cup quinoa", "1 cucumber", "1 bell pepper"],
-    "preparing_time": "15 min",
+    "preparing_time": 15,
     "calories": 220
   }
 ]

@@ -6,12 +6,13 @@ import RecipeCards from './components/recipe-cards';
 function App() {
   const [wishlist, setWishlist] = useState([]);
   const [displayToast, setDisplayToast] = useState(false);
-  // const [cooking, setCooking] = useState([]);
+  const [cookingItems, setCookingItems] = useState([]);
 
   const wishlistHandler = (item) => {
     const isExist = wishlist.some((wishedItem) => wishedItem.recipe_id === item.recipe_id);
+    const isExistInCooking = cookingItems.some((cookingItem) => cookingItem.recipe_id === item.recipe_id);
 
-    if (!isExist) {
+    if (!isExist && !isExistInCooking) {
       setWishlist([...wishlist, item]);
     } else {
       setDisplayToast(true);
@@ -19,6 +20,7 @@ function App() {
   };
 
   const cookingTableHandler = (item) => {
+    setCookingItems([...cookingItems, item]);
     const newWishlist = wishlist.filter((wishedItem) => wishedItem.recipe_id !== item.recipe_id);
 
     setWishlist(newWishlist);
@@ -74,7 +76,7 @@ function App() {
           </header>
           <main className="flex gap-6">
             <RecipeCards wishlistHandler={wishlistHandler} />
-            <Cart wishlist={wishlist} cookingTableHandler={cookingTableHandler} />
+            <Cart wishlist={wishlist} cookingTableHandler={cookingTableHandler} cookingItems={cookingItems} />
           </main>
         </section>
       </main>
