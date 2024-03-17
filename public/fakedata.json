@@ -2,7 +2,7 @@
   {
     "recipe_id": "1",
     "recipe_name": "Spaghetti Bolognese",
-    "recipe_image": "https://i.ibb.co/ChTGMRR/recipe1.jpg",
+    "recipe_image": "https://i.ibb.co/3c9yc1t/recipe1.jpg",
     "short_description": "Classic Italian pasta dish with savory meat sauce.",
     "ingredients": ["500g ground beef", "1 onion, chopped", "2 cloves garlic, minced"],
     "preparing_time": 30,
@@ -11,7 +11,7 @@
   {
     "recipe_id": "2",
     "recipe_name": "Chicken Caesar Salad",
-    "recipe_image": "https://i.ibb.co/82sk0Ts/recipe2.jpg",
+    "recipe_image": "https://i.ibb.co/dmcjXs7/recipe2.jpg",
     "short_description": "Grilled chicken, crisp lettuce, and Caesar dressing unites in.",
     "ingredients": ["200g grilled chicken breast", "150g Romaine lettuce", "50g Croutons"],
     "preparing_time": 25,
@@ -20,7 +20,7 @@
   {
     "recipe_id": "3",
     "recipe_name": "Grilled Salmon",
-    "recipe_image": "https://i.ibb.co/XxjBQkt/recipe3.jpg",
+    "recipe_image": "https://i.ibb.co/HYLD0DF/recipe3.jpg",
     "short_description": "Healthy grilled salmon served with lemon and herbs",
     "ingredients": ["2 salmon fillets", "1 lemon", "2 tbsp olive oil"],
     "preparing_time": 20,
@@ -29,7 +29,7 @@
   {
     "recipe_id": "4",
     "recipe_name": "Veggie Fried Rice",
-    "recipe_image": "https://i.ibb.co/pwPVfYj/recipe4.jpg",
+    "recipe_image": "https://i.ibb.co/mGPfyXp/recipe4.jpg",
     "short_description": "Nutritious and flavorful salad made with quinoa, vegetables, and vinaigrette dressing",
     "ingredients": ["1 cup quinoa", "1 cucumber", "1 bell pepper"],
     "preparing_time": 15,
