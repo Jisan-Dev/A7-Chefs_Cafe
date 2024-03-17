@@ -2,7 +2,7 @@ import { HiOutlineUserCircle } from 'react-icons/hi2';
 
 const Header = () => {
   return (
-    <header className="font-lexend container mx-auto my-6">
+    <header className="font-lexend container mx-auto my-3 md:my-6">
       <div className="navbar bg-base-100">
         <div className="navbar-start max-sm:w-full">
           <div className="dropdown">
@@ -56,7 +56,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end max-sm:w-auto">
           <label className="input input-bordered  hidden md:flex items-center gap-2 rounded-full mr-4">
             <input type="text" className="grow" placeholder="Search" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 opacity-70">

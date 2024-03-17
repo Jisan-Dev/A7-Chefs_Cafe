@@ -67,14 +67,14 @@ function App() {
         </div>
 
         {/* OUR RECIPES SECTION */}
-        <section className="mb-24">
+        <section className="mb-24 max-sm:px-2">
           <header className="max-w-[823px] mx-auto space-y-5 text-center mb-11">
-            <h2 className="text-slate-900 text-[40px] font-semibold">Our Recipes</h2>
-            <p className="text-slate-900 text-opacity-60 text-base font-normal">
+            <h2 className="text-slate-900 text-4xl md:text-[40px] font-semibold">Our Recipes</h2>
+            <p className="text-slate-900 text-opacity-60 text-sm md:text-base font-normal">
               Embark on a culinary adventure with us and discover the magic that happens when passion meets plate. Let's create unforgettable memories, one recipe at a time.
             </p>
           </header>
-          <main className="flex gap-6 flex-col lg:flex-row overflow-x-hidden">
+          <main className="flex gap-6 flex-col lg:flex-row">
             <RecipeCards wishlistHandler={wishlistHandler} />
             <Cart wishlist={wishlist} cookingTableHandler={cookingTableHandler} cookingItems={cookingItems} />
           </main>
